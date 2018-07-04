@@ -37,6 +37,10 @@ body {
   background: gold;
 }
 
+.social-item:last-child {
+  grid-column: span 2;
+}
+
 .social-name {
   color: #551A8B;
   font-size: 1.875rem;
@@ -45,12 +49,12 @@ body {
 }
 
 .social-link {
-  color: #551A8B;
   display: block;
   text-decoration: none;
 }
 
 .social-desc {
+  cursor: default;
   font-size: .9375rem;
   text-indent: 5px;
   overflow: hidden;
@@ -64,8 +68,22 @@ body {
   white-space: normal;
 }
 
-@media (max-width: 39.375em) {
+@media (max-width: 46em) {
   body {
     align-items: flex-start;
+  }
+
+  .social {
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  }
+
+  .social-item:last-child {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 24em) {
+  .social {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   }
 }
