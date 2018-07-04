@@ -1,5 +1,8 @@
 'use strict';
 
+const social = document.querySelector('.social'),
+btn = document.querySelector('.btn');
+
 const data = [
   {
     name: '🌐 Duolingo',
@@ -51,4 +54,8 @@ for (let i = 0; i < data.length; i++) {
   `;
 } 
 
-document.querySelector('.social').innerHTML = output;
+social.innerHTML = output;
+
+btn.addEventListener('click', () => {
+  window.history.back();
+});
