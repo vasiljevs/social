@@ -37,3 +37,18 @@ const data = [
     url: 'data.typeracer.com/pit/profile?user=vasiljevs'
   }
 ];
+
+let output = '';
+
+for (let i = 0; i < data.length; i++) {
+  output += `
+  <div class="social-item">
+    <h1 class="social-name">
+      <a href="https://${data[i]['url']}" target="_blank" rel="noopener">${data[i]['name']}</a>
+    </h1>
+    <p class="social-desc">${data[i]['description']}</p>
+  </div>
+  `;
+} 
+
+document.querySelector('.social').innerHTML = output;
