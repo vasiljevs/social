@@ -57,5 +57,5 @@ for (let i = 0; i < data.length; i++) {
 social.innerHTML = output;
 
 btn.addEventListener('click', () => {
-  window.history.back();
+  window.location.href = 'fb://feed/%@';
 });

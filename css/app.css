@@ -54,6 +54,7 @@ body {
 }
 
 .social-item:last-child {
+  text-align: center;
   grid-column: span 2;
 }
 
@@ -116,6 +117,7 @@ body {
   }
 
   .social-item:last-child {
+    text-align: left;
     grid-column: 1 / 2;
   }
 }
