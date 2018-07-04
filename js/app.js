@@ -43,9 +43,9 @@ let output = '';
 for (let i = 0; i < data.length; i++) {
   output += `
   <div class="social-item">
-    <h1 class="social-name">
-      <a class="social-link" href="https://${data[i]['url']}" target="_blank" rel="noopener">${data[i]['name']}</a>
-    </h1>
+    <a class="social-link" href="https://${data[i]['url']}" target="_blank" rel="noopener">
+      <h1 class="social-name">${data[i]['name']}</h1>
+    </a>
     <p class="social-desc">${data[i]['description']}</p>
   </div>
   `;

@@ -33,29 +33,39 @@ body {
   padding: .625rem;
 }
 
+.social-item:hover {
+  background: gold;
+}
+
 .social-name {
+  color: #551A8B;
+  font-size: 1.875rem;
   font-weight: 500;
   margin-bottom: .3125rem;
 }
 
 .social-link {
+  color: #551A8B;
   display: block;
   text-decoration: none;
 }
 
 .social-desc {
+  font-size: .9375rem;
   text-indent: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-shadow: 0px 1px #ececec;
 }
 
-@media (max-width: 29.0625em) {
-  .social-desc {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; 
-  }
-  
-  .social-desc:hover {
-    overflow: visible;
-    white-space: normal;
+.social-desc:hover {
+  overflow: visible;
+  white-space: normal;
+}
+
+@media (max-width: 39.375em) {
+  body {
+    align-items: flex-start;
   }
 }
