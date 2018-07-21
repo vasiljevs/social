@@ -57,5 +57,10 @@ for (let i = 0; i < data.length; i++) {
 social.innerHTML = output;
 
 btn.addEventListener('click', () => {
-  window.location.href = 'fb://feed/%@';
+
+  if (window.innerWidth > 1024) {
+    window.location.href = 'https://www.facebook.com/feed';
+  } else {
+    window.location.href = 'fb://feed/%@';
+  }
 });
