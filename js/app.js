@@ -1,9 +1,6 @@
 'use strict';
 
-const social = document.querySelector('.social'),
-btn = document.querySelector('.btn');
-
-const data = [
+const accounts = [
   {
     name: 'Duolingo',
     icon: '🌐',
@@ -48,23 +45,26 @@ const data = [
   }
 ];
 
-let output = '';
+const displayAccount = (data) => {
+  let output = '';
 
-for (let i = 0; i < data.length; i++) {
-  output += `
-  <div class="social-item">
-    <a class="social-link" href="https://${data[i]['url']}" title="${data[i]['name']}" target="_blank" rel="noopener">
-      <h2 class="social-name">${data[i]['icon']} ${data[i]['name']}</h2>
-    </a>
-    <p class="social-desc">${data[i]['description']}</p>
-  </div>
-  `;
-} 
+  data.forEach((item) => {
+    output += `
+      <div class="item">
+        <a class="link" href="https://${item.url}" title="${item.name}" target="_blank" rel="noopener">
+          <h2 class="name">${item.icon} ${item.name}</h2>
+        </a>
+        <p class="description">${item.description}</p>
+      </div>
+    `;
+  });
 
-social.innerHTML = output;
+  document.querySelector('.accounts').innerHTML = output;
+};
 
-btn.addEventListener('click', () => {
+displayAccount(accounts);
 
+document.querySelector('.btn').addEventListener('click', () => {
   if (window.innerWidth > 1024) {
     window.location.href = 'https://www.facebook.com/feed';
   } else {
